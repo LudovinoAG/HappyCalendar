@@ -1,0 +1,915 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Roboto"
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Regular.ttf);
+  }
+
+#my-canvas{
+	position: absolute;
+	width: 80%;
+	height: auto;
+	z-index: -1;
+}
+
+body{
+	background-image: url("../pics/cumple3.jpg");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+
+}
+
+.anima{
+	position: absolute;
+	width: 100%;
+	height: 800px;
+}
+
+.logo{
+	position: absolute;
+	margin: 5px 10px 0px;
+	transform: rotate(-20deg);
+	animation: RotaLogo ease 3s infinite;
+}
+
+.logo img{
+	width: 72px;
+	border-radius: 100px;
+	box-shadow: 0px 1px 2px 0px black ;
+}
+
+@keyframes RotaLogo{
+	0%{
+		transform: rotate(-20deg);
+	}
+
+	25%{
+		transform: rotate(-40deg);
+	}
+
+	50%{
+		transform: rotate(-20deg);
+	}
+
+	75%{
+		transform: rotate(-40deg);
+	}
+
+	100%{
+		transform: rotate(-20deg);
+	}
+}
+
+
+header{
+	width: 95%;
+	height: 75px;
+	background: rgb(230,13,13);
+	background: linear-gradient(50deg, rgba(200,13,13,1) 47%, rgba(62,24,24,1) 93%);
+	box-shadow: 0px 1px 2px 0px black;
+	margin-left: 53px;
+	z-index: 2;
+}
+
+.name{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 17px 40px 0px;
+}
+
+
+
+.info{
+	text-align: right;
+	color: white;
+	font-size: 0.9em;
+	margin: 17px 20px 0px;
+}
+
+.titulo{
+	color: white;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+.details{
+	font-size: 0.7em;
+	color: white;
+}
+
+.dateNow{
+	font-size: 0.8em;
+	color: white;
+}
+
+.menu{
+	height: 30px;
+	background-color: rgba(201, 14, 14, 0.8);
+	box-shadow: 0px 1px 2px 0px black;
+	border-top: 0.1rem solid white;
+}
+
+.menu ul{
+	display: flex;
+	margin-left: -33px;
+}
+
+.menu ul li{
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	color: white;
+	height: 30px;
+}
+
+.menu ul li:nth-child(4){
+	margin-left: auto;
+	font-size: 1.5em;
+}
+
+.menu ul li:nth-child(5){
+	font-size: 1.5em;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	color:white;
+	font-size: 0.8em;
+	transition: font-weight ease-in-out 0.2s;
+	transition: font-size ease-in-out 0.2s;
+}
+
+.menu ul li:hover > a{
+	background-color:rgba(255,255,255,0.7);
+	height: 29px;
+	margin-top: -3px;
+	width: 100%;
+	text-align: center;
+	font-size: 0.6em;
+	font-weight: bolder;
+	padding: 6px;
+	color: black;
+	transition: font-weight ease-in-out 0.2s;
+	transition: font-size ease-in-out 0.2s;
+	transition: background-color ease-in-out 0.4s;
+}
+
+.div_menu{
+	margin-top: 23px;
+}
+
+.contenido_principal{
+	width:95%;
+	height: 450px;
+	margin-left: 54px;
+	margin-top: 45px;
+}
+
+.contenido_principal .fila_contenido{
+	display: flex;
+	width: 100%;
+	margin-left: 0px;
+	height: 100%;
+}
+
+
+.contenido_principal .fila_contenido .contenido_left, .contenido_rigth,
+ .contenido_rigth_empleados,.contenido_rigth_configuracion {
+	background-color: rgba(132,132,132,0.5);
+	box-shadow: 0px 1px 2px 0px black;
+	border-top: 0.3rem solid brown;
+	padding: 20px;
+	height: 100%;
+	margin-left: auto;
+	width: 37%;
+}
+
+footer{
+	display: flex;
+	width:95%;
+	height: 70px;
+	background-color: rgba(132,132,132,0.5);
+	margin-left: 54px;
+	margin-top: 10px;
+	box-shadow: 0px 1px 2px 0px black;
+	justify-content: center;
+	align-items: center;
+	border-top: 0.3rem solid brown;
+}
+
+footer div {
+	width: 100%;
+}
+
+footer div p{
+	font-size: 0.9em;
+	font-weight: bolder;
+	text-align: center;
+	margin-top: 35px;
+	justify-content: center;
+}
+
+footer div span{
+display: block;
+position: relative;
+text-align: right;
+font-size: 0.7em;
+color: grey;
+padding-bottom: 10px;
+margin-right: 10px;
+margin-top: -10px;
+}
+
+.contenido_principal .fila_contenido .contenido_left, .contenido_left_Configuracion{
+		height: 100%;
+		width: 61%;
+		margin-right: 20px;
+}
+
+.contenido_principal .fila_contenido .contenido_left h4, .contenido_left_Configuracion h4{
+	margin-top: 10px;
+	color: black;
+	border-left: 0.2rem solid brown;
+	border-bottom: 0.1rem solid brown;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+.contenido_principal .fila_contenido .contenido_left i, .contenido_left_Configuracion i{
+	color: white;
+}
+
+.contenido_principal .fila_contenido .contenido_left p, .contenido_left_Configuracion p{
+	text-align: justify;
+	color: black;
+	background-color: rgba(255,255,255, 0.6);
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 0.8rem;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth{
+	background-image: url("../pics/cumple1.jpg");
+	background-size: cover;
+	background-position: center;
+	text-align: right;
+	padding: 20px;
+	height: 100%;
+	margin-left: auto;
+	width: 37%;
+}
+
+
+.contenido_principal .fila_contenido .contenido_rigth span:first-of-type{
+	color: black;
+	font-weight: 100;
+	font-size: 1.5em;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth span:last-of-type{
+	color: darkred;
+	font-weight: bold;
+	font-size: 1.5em;
+	letter-spacing: 2px;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth p{
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 4px;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio{
+	height: 65%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	overflow-y: auto;
+}
+
+
+.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio img{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	text-align: right;
+	margin: 5px;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio .Name_Agent label{
+	font-size: 0.8em;
+	margin-bottom: 10px;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio .Id_Agent label{
+	font-size: 0.9em;
+	margin-top: 10px;
+}
+
+
+
+
+/*PERSONALIZAR SCROLL del DIV Fotos*/
+.div_fotos_inicio::-webkit-scrollbar {
+    width: 4px;     
+    height: 4px;    
+}
+
+
+.div_fotos_inicio::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.div_fotos_inicio::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.div_fotos_inicio::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+.div_fotos_inicio::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+.div_fotos_inicio::-webkit-scrollbar-track:hover,
+.div_fotos_inicio::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+
+
+
+
+
+
+/*Seccion Empleados*/
+.div_search{
+	margin: 10px 0px;
+	background-color: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#result_count{
+    display: block;
+    text-align: left;
+    font-size: small;
+    margin: 5px;
+    font-weight: bold;
+    color: brown;
+}
+
+.div_search div:first-child{
+	border-right: 0.01rem solid rgba(132,0,0,0.3);
+	padding-right: 20px;
+}
+
+#drop_Criterios{
+	margin-top: 12px;
+	border-right: 0px;
+}
+
+.tbl_emp{
+	font-size: 0.8em;
+}
+
+.tbl_mensajes{
+	font-size: 0.8em;
+}
+
+.tbl_emp::even{
+	background-color: red;
+}
+
+.tbl_emp button{
+	width: 30px;
+	height: 30px;
+}
+
+.tbl_emp button i{
+	color: black;
+}
+
+#Res_sel_criterio input{
+	font-size: 0.8em;
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados, .contenido_left_Configuracion{
+	background-color: rgba(132,132,132,0.5);
+	box-shadow: 0px 1px 2px 0px black;
+	border-top: 0.3rem solid brown;
+	padding: 20px;
+	height: 100%;
+	margin-right: auto;
+	width: 61%;
+
+}
+
+
+
+
+.contenido_principal .fila_contenido .contenido_left_empleados .titulo_empleados{
+	margin-top: 10px;
+	color: black;
+	border-left: 0.2rem solid brown;
+	border-bottom: 0.1rem solid brown;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+#lista_empleado_criterio{
+	margin: 0px auto;
+	background-color: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+	width: 97%;
+}
+
+
+.div_vista{
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+
+.div_vista div{
+	text-align: center;
+}
+
+.div_vista div div button{
+	margin-bottom: 5px;
+}
+
+.div_vista div div span{
+	margin-bottom: 0px;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.div_vista div div label{
+	font-size: 1.0em;
+	color: white;
+	font-weight: 100;
+}
+
+.div_vista img{
+    display: inline-block;
+    height: 170px;
+    width: 170px;
+    background-color: white;
+    border-radius: 100%;
+    margin-top: 5px;
+    box-shadow: 0px 1px 3px 1px black;
+    margin-bottom: 10px;
+}
+
+
+.contenido_principal .fila_contenido .contenido_rigth_empleados{
+	background-image: url("../pics/cumple1.jpg");
+	background-size: cover;
+	background-position: right;
+	height: 100%;
+	margin-left: auto;
+	width: 37%;
+	overflow: hidden;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth_empleados .linea_animada{
+	width: 100%;
+	height: 5px;
+	margin-left: 0px;
+	background-color: brown;
+	animation: AnimaLinea ease 3s;
+	opacity: 0;
+}
+
+#lstsupervisor, #lstsegmento {
+	width: 150px;
+	font-size: 0.9em;
+}
+
+
+#bth_enviar{
+	display: none;
+	margin-top: 5px;
+}
+
+
+#botones{
+	display: inline-block;
+	padding: 10px;
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados .agregar_empleado input, label,
+.contenido_left_Configuracion .agregar_empleado input{
+	font-size: 0.8em;
+}
+
+
+.contenido_principal .fila_contenido .contenido_left_empleados .agregar_empleado,
+.contenido_left_Configuracion .agregar_empleado{
+	margin: 1px;
+	background-color: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+	padding: 15px 5px 5px 5px;
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados .agregar_empleado 
+.form-group{
+	margin-bottom: 5px;
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados .titulo_add{
+margin-top: 20px;
+color: black;
+border-left: 0.2rem solid brown;
+border-bottom: 0.1rem solid brown;
+padding-left: 0.5rem;
+padding-bottom: 0.5rem;
+font-size: 0.8em;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados .titulo_add i{
+	color: white;
+}
+
+
+.contenido_principal .fila_contenido .contenido_left_empleados .div_admin_mensajes,
+.contenido_left_Configuracion .div_admin_mensajes{
+	margin: 1px;
+	background-color: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+	padding: 15px 5px 5px 5px;
+	height: 190px;
+
+}
+
+.contenido_principal .fila_contenido .contenido_left_empleados 
+.div_admin_mensajes table td,tr{
+	font-size: 0.8em;	
+}
+
+.boton-msg{
+	width: 20px;
+	height: 20px;
+	font-size: 0.8em;
+	padding: 5px;
+}
+
+
+.activado{
+	background-color: rgba(255,255,255,0.5);
+	margin-top: -2px;
+	height: 28px;
+}
+
+.div_config img{
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+	background-color: white;
+	border-radius: 100%;
+	margin-top: 60px;
+	box-shadow: 0px 1px 3px 1px black;
+	margin-bottom: 10px;
+	
+}
+
+
+
+.contenido_principal .fila_contenido .contenido_rigth_configuracion{
+	background-image: url("../pics/cumple1.jpg");
+	background-size: cover;
+	background-position: right;
+}
+
+ 
+.contenido_principal .fila_contenido .contenido_rigth_configuracion .titulo_config{
+	color: black;
+	border-left: 0.2rem solid brown;
+	border-bottom: 0.1rem solid brown;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth_configuracion .titulo_config i{
+	color: white;
+}
+
+.contenido_principal .fila_contenido .contenido_rigth_configuracion #txtFind_result{
+	font-size: 0.7em;
+	color: blue;
+	margin: 0px 2px;
+}
+
+.div_config img{
+	height: 82px;
+	width: 82px;
+	background-color: white;
+	border-radius: 100%;
+	box-shadow: 0px 1px 3px 1px black;
+	margin: auto;
+}
+
+#titulo_mensajes, #titulo_cod_mensaje, #titulo_find_empleado{
+	color: white;
+	font-weight: 100;
+}
+
+#lblmensajes{
+	width: 105%;
+	font-size: 0.8em;
+	background-color: rgba(255, 255, 255, 1);
+	color: black;
+	border-radius: 5px;
+	padding: 15px 5px 5px 5px;
+}
+
+#lstmensajes{
+	width: 185px;
+}
+
+
+.contenido_principal .fila_contenido .titulo_admin_mensaje{
+	font-size: 0.9em;
+	color: black;
+	border-bottom: 0.1rem solid brown;
+	padding-bottom: 0.5rem;
+	margin-top: 10px;
+}
+
+.contenido_principal .fila_contenido .titulo_admin_mensaje i, .titulo_empleados i{
+	color: white;
+	margin-top: 10px;
+}
+
+.grupo_botones_mensaje button{
+    width: 60%;
+    margin-top: 10px;
+}
+
+.grupo_botones_mensaje{
+	width: max-content;
+    margin-top: 10vh;
+}
+
+#contenedor_foto{
+	height: fit-content;
+}
+
+
+#msg_resul{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: brown;
+}
+
+#msg_error{
+	display: block;
+	width: 100%;
+	background-color: rgba(255,255,255, 0.5);
+	font-weight: bold;
+	color: brown;
+	font-size: 1.2em;
+	padding: 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.div_resul{
+	height: 75%;
+	overflow-y: auto;
+	
+}
+
+.div_resul::-webkit-scrollbar-thumb{
+	height: 4px;
+	width: 4px;
+}
+
+
+.div_resul::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.div_resul::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+.div_resul::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+.div_resul::-webkit-scrollbar-track:hover,
+.div_resul::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+
+
+#file_foto{
+	display: none;
+	width: 75%;
+	height: min-content;
+	font-size: 0.7em;
+	margin-bottom: 7px;
+}
+
+.progress_bar{
+	text-align: center;
+	width: 25px;
+}
+
+.progress{
+	width: 25px;
+    margin-left: auto;
+    height: 200px;
+    margin-top: -330px;
+}
+
+.div_admin_mensajes{
+	height: 75%;
+	overflow-y: auto;
+}
+
+.msg_status{
+	margin-right: auto;
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+
+
+
+
+@keyframes AnimaLinea{
+	0%{
+		
+		transform: translateY(0px);
+	
+	}
+
+	50%{
+		transform: translateY(500px);
+		opacity: 1;
+	}
+
+	100%{
+		transform: translateY(0px);
+		opacity: 0;
+		
+	}
+}
+
+
+
+/*Media Query*/
+@media (max-width: 790px) {
+
+	header{
+		height: 125px;
+	}
+
+
+	.logo img{
+		width: 72px;
+	}
+
+	.h_name{
+		display: block;
+		text-align: center;
+	}
+
+	.name .titulo{
+		font-size: 1.2em;
+	}
+
+	.name .details{
+		font-size: 0.8em;
+	}
+
+	.h_info{
+		display: block;
+		text-align: center;
+	}
+
+	.info{
+		text-align: center;
+		font-size: 1.0em;
+	}
+
+	.div_menu{
+		margin-top: 20px;
+	}
+
+
+	.contenido_principal .fila_contenido{
+		display: flex;
+		flex-direction: column;	
+	}
+
+	.contenido_principal .fila_contenido div{
+		width: 100%;
+		height: 400px;
+	}
+
+	.contenido_principal, header, footer{
+		width: auto;
+	}
+
+	.menu ul li{
+		width: 100%;
+		height: 30px;
+	}
+
+	.menu ul li:hover > a{
+		background-color:rgba(255,255,255,0.7);
+		height: 28px;
+		margin-top: -3px;
+		width: 100%;
+		text-align: center;
+		font-size: 1.0em;
+		font-weight: bolder;
+		color: black;
+		transition: font-weight ease-in-out 0.2s;
+		transition: font-size ease-in-out 0.2s;
+		transition: background-color ease-in-out 0.4s;
+	}
+
+	.contenido_principal .fila_contenido{
+		height: 700px;
+	}
+
+
+	.contenido_principal .fila_contenido .contenido_rigth{
+		height: 300px;
+	}
+
+	.contenido_principal .fila_contenido .contenido_left h4{
+		margin-top: 15px;
+		color: black;
+		border-left: 0.2rem solid brown;
+		padding-left: 0.5rem;
+		font-size: 1.0em;
+	}
+	
+	.contenido_principal .fila_contenido .contenido_left p{
+		text-align: justify;
+		color: black;
+		background-color: rgba(255,255,255, 0.7);
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 0.9em;
+	}
+
+
+
+	.contenido_principal .fila_contenido .contenido_rigth{
+		background-image: url("../pics/cumple1.jpg");
+		background-position: top;
+	}
+
+	footer{
+		width:92%;
+		margin-top: 40%;
+	}
+
+	.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio{
+		width: min-content;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		margin-left: auto;
+	}
+	
+	.contenido_principal .fila_contenido .contenido_rigth .div_fotos_inicio img{
+		height: 60px;
+		width: 60px;
+	}
+	
+
+	
+
+}
